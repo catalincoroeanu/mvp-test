@@ -1,0 +1,45 @@
+[tool.black]
+line-length = 79
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.idea
+  | \.hg
+  | \.mypy_cache
+  | __pycache__
+  | \.tox
+  | venv
+  | venv2
+  | tests/
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | migrations/*
+  | tests*
+  | i18n
+  | manage.py
+  | wsgi.py
+  | asgi.py
+  | release_the_kraken_data.py,
+  | release_the_kraken.py
+
+)/
+'''
+
+ignore = [
+    "E501", #
+    "W6",   #
+]
+
+[tool.isort]
+profile = "hug"
+src_paths = ["apps", "config"]
+multi_line_output=3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 79

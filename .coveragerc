@@ -1,0 +1,33 @@
+[run]
+omit =
+    *venv/*
+    *apps.py,
+    *migrations/*,
+    *lib/*,
+    *bin/*,
+    *include/*,
+    *share/*,
+    *static/*,
+    *settings*,
+    *tests/*,
+    *tests.py,
+    *__init__.py,
+    *urls.py,
+    *wsgi.py,
+    manage.py,
+    apps/i18n/*
+    apps/config/*
+
+
+[report]
+exclude_lines =
+    pragma: no cover
+    from
+    import
+    def __repr__
+    if self.debug:
+    if settings.DEBUG
+    raise AssertionError
+    raise NotImplementedError
+    if 0:
+    if __name__ == .__main__.:
